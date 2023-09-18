@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 100px;
+}
+
+button {
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+button[data-operator], button[data-operate], button[data-reverse] {
+    background-color: green;
+}
+
+button[data-number], button[data-decimal] {
+    background-color: lightblue;
+}
+
+button[data-clear], button[data-delete] {
+    background-color: lightcoral;
+}
+
+button:hover {
+    filter: brightness(75%);
+}
+
+button:active {
+    filter: brightness(50%);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 75vh;
+    min-height: 500px;
+}
+
+.calculator {
+    background-color: goldenrod;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.display {
+    background-color: gray;
+    padding: 10px 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: right;
+    min-height: 64px;
+    font-size: 40px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+#clear {
+    grid-column: span 2;
+}
+
+.btn {
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.fa-github {
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+a {
+    text-decoration: none;
+    color: green;
+}
